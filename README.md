@@ -113,3 +113,76 @@ Instale o pacote **grunt-concurrent** como uma dependência do seu projeto usand
 No seu arquivo Gruntfile.js, carregue o plugin grunt-concurrent utilizando a função loadNpmTasks():
 `grunt.loadNpmTasks('grunt-concurrent’);`
 Configure as tarefas que você deseja executar em paralelo utilizando a tarefa concurrent no seu arquivo Gruntfile.js. Por fim, registre a tarefa concurrent como uma tarefa padrão ou como uma tarefa personalizada. 
+
+#Pacote grunt-contrib-watch
+
+Instale o pacote **grunt-contrib-watch** como uma dependência do seu projeto usando o seguinte comando:
+`npm install grunt-contrib-watch --save-dev`
+
+No seu arquivo Gruntfile.js, carregue o plugin **grunt-contrib-watch** utilizando a função 
+**loadNpmTasks():**
+
+`grunt.loadNpmTasks('grunt-contrib-watch’);`
+
+Configure a tarefa watch no **grunt.initConfig()**, especificando os arquivos que você deseja monitorar e as tarefas a serem executadas quando ocorrerem alterações. Por fim, execute a tarefa do Grunt para iniciar o monitoramento.
+
+
+#Pacote grunt-replace
+
+Instale o pacote **grunt-replace** como uma dependência do seu projeto usando o seguinte comando:
+`npm install grunt-replace --save-dev`
+
+No seu arquivo Gruntfile.js, carregue o plugin grunt-replace utilizando a função loadNpmTasks():
+
+`grunt.loadNpmTasks('grunt-replace');`
+
+Configure a tarefa replace no **grunt.initConfig()**, especificando os arquivos e as substituições que você deseja realizar. Por fim, execute a tarefa do Grunt para iniciar o processo de substituição.
+
+
+#Pacote grunt-contrib-htmlmin
+
+Instale o pacote grunt-contrib-htmlmin como uma dependência do seu projeto usando o seguinte comando:
+`npm install grunt-contrib-htmlmin --save-dev`
+
+No seu arquivo Gruntfile.js, carregue o plugin grunt-contrib-htmlmin utilizando a função loadNpmTasks():
+
+`grunt.loadNpmTasks('grunt-contrib-htmlmin');`
+
+Configure a tarefa htmlmin no **grunt.initConfig()**, especificando os arquivos HTML que você deseja minificar e as opções de minificação. Por fim, execute a tarefa do Grunt para iniciar o processo de minificação.
+
+
+#Pacote grunt-contrib-clean
+
+Instale o pacote grunt-contrib-clean como uma dependência do seu projeto usando o seguinte comando:
+`npm install grunt-contrib-clean --save-dev`
+
+No seu arquivo Gruntfile.js, carregue o plugin grunt-contrib-clean utilizando a função loadNpmTasks():
+`grunt.loadNpmTasks('grunt-contrib-clean');`
+
+Configure a tarefa clean no **grunt.initConfig()**, especificando os arquivos e diretórios que você deseja limpar. Por fim, execute a tarefa do Grunt para iniciar o processo de limpeza.
+
+#Pacote grunt-contrib-uglify
+
+Instale o pacote com o comando:
+`npm install grunt-contrib-uglify --save-dev`
+
+Configure o Grunt para usar o "grunt-contrib-uglify" em seu arquivo Gruntfile.js. Abra o arquivo e adicione a seguinte configuração:
+
+```
+module.exports = function(grunt) {  
+  grunt.initConfig({    
+    uglify: {      
+      options: {        
+        // Opções do UglifyJS aqui     
+        
+         },
+
+target: {        
+  files: {          
+    // Configuração dos arquivos de origem e destino aqui        
+      }      
+    }    
+  }  
+  })
+}
+```
