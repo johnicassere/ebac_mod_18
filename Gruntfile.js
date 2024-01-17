@@ -4,7 +4,7 @@ module.exports = function (grunt) {
         less: {
             development: {
                 files: {
-                    './dev/style/style.css': './src/style/main.less',
+                    './dev/style/main.css': './src/style/main.less',
                 }
             },
             production:{
@@ -33,11 +33,11 @@ module.exports = function (grunt) {
                     patterns:[
                         {
                         match:'ENDERECO_DO_CSS',
-                        replacement:'./dev/style/style.css'
+                        replacement:'./dev/style/main.css'
                     },
                     {
                         match:'ENDERECO_DO_JS',
-                        replacement:'./src/script/main.js'
+                        replacement:'./src/scripts/main.js'
                     }
                 ]
                 },
@@ -59,7 +59,7 @@ module.exports = function (grunt) {
                     },
                     {
                         match:'ENDERECO_DO_JS',
-                        replacement:'./script/main.min.js'
+                        replacement:'./dist/scripts/main.min.js'
                     }
                 ]
                 },
@@ -89,10 +89,11 @@ module.exports = function (grunt) {
         uglify:{
             target:{
                 files:{
-                    './dist/scripts/main.min.js':'./src/script/main.js'
+                    './dist/scripts/main.min.js':'./src/scripts/main.js'
                 }
             }
-        }
+        },
+       
        
     })
     
@@ -103,6 +104,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    
 
    
     grunt.registerTask('default', ['watch'])
